@@ -7,5 +7,5 @@ import com.examples.jpa.carrental.entidades.Reserva;
 @Service
 public interface IReservaServicio {
 
-    Reserva crearReserva(Reserva datosReserva) throws Exception;
+    Reserva crearReserva(Integer idVehiculo, Integer idCliente) throws Exception;
 }

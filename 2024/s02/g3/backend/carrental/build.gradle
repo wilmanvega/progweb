@@ -35,6 +35,13 @@ dependencies {
 // NOTE: The following dependencies were automatically added by the [Gradle Plus] extension.
 // Please review them to ensure they match your project's requirements.
 	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+
+// NOTE: The following dependencies were automatically added by the [Gradle Plus] extension.
+// Please review them to ensure they match your project's requirements.
+	implementation 'org.springframework.boot:spring-boot-starter-security'
+	// https://mvnrepository.com/artifact/io.jsonwebtoken/jjwt
+implementation group: 'io.jsonwebtoken', name: 'jjwt', version: '0.12.6'
+
 }
 
 tasks.named('test') {

@@ -4,17 +4,15 @@ import org.springframework.beans.factory.annotation.Autowired;
 
 import com.examples.jpa.carrental.entidades.Vehiculo;
 import com.examples.jpa.carrental.repositorios.VehiculoRepositorio;
-import com.examples.jpa.carrental.servicios.IAutoServicio;
+import com.examples.jpa.carrental.servicios.IVehiculoServicio;
 
-public class AutoServicioImpl implements IAutoServicio {
+public class VehiculoServicioImpl implements IVehiculoServicio {
 
     @Autowired
-    private VehiculoRepositorio autoRepo;
+    private VehiculoRepositorio repo;
 
     @Override
     public Vehiculo obtenerAuto(Integer id) throws Exception {
-        Vehiculo vehiculo = autoRepo.findById(id).orElseThrow(() -> new Exception("Vehiculo no encontrado"));
-        return vehiculo;
+        return repo.findById(id).orElseThrow(() -> new Exception("Vehiculo no encontrado"));
     }
-
 }

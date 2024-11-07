@@ -7,12 +7,10 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.OneToMany;
-import lombok.Getter;
-import lombok.Setter;
+import lombok.Data;
 
 @Entity
-@Getter
-@Setter
+@Data
 public class Cliente {
 
     @Id
@@ -23,7 +21,7 @@ public class Cliente {
     private String telefono;
     private String email;
 
-    @OneToMany
+    @OneToMany(mappedBy = "idReserva")
     private List<Reserva> reservas;
 
 }
