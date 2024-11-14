@@ -1,12 +1,15 @@
 package com.examples.jpa.carrental.servicios;
 
-import org.springframework.stereotype.Service;
+import java.util.List;
 
 import com.examples.jpa.carrental.entidades.Vehiculo;
 
-@Service
 public interface IVehiculoServicio {
 
-    Vehiculo obtenerAuto(Integer id) throws Exception;
+    Vehiculo crearVehiculo(Vehiculo datos);
+
+    Vehiculo obtenerVehiculo(Integer id);
+
+    List<Vehiculo> obtenerVehiculos();
 
 }

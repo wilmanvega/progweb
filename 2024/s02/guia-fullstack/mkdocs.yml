@@ -1,0 +1,4 @@
+site_name: Crear una aplicación FullStack con MySQL, SpringBoot y ReactJS
+nav:
+  - Introducción: intro.md
+  - Base de datos: basedatos.md
